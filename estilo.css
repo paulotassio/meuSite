@@ -1,0 +1,334 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f1115;
+  color: #e0f7fa;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.top-image {
+  position: relative;
+  height: 350px; /* Ajuste a altura conforme necessário */
+  background: url('imagens/perfil/img_topo.png') no-repeat;
+  background-position: 15% center; /* Afasta 50px da esquerda e centraliza verticalmente */
+  background-size: 390px 500px;
+  display: flex;
+  justify-content: flex-end; /* Alinha o conteúdo (h1) à direita */
+  align-items: center;
+  z-index: 999;
+}
+
+.top-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.top-image h1 {
+  position: relative;
+  color: #00e5ff;
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px #00e5ff;
+  z-index: 2;
+  margin-right: 15%; /* Adiciona espaço à direita para o texto não colar na borda */
+}
+
+header {
+  background-color: #1a1c20;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+  border-bottom: 2px solid #00e5ff;
+  box-shadow: 0 2px 8px rgba(0, 229, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00e5ff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #80d8ff;
+}
+
+.hero {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #00e5ff;
+}
+
+.sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #1c1f26;
+  border-left: 4px solid #00e5ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card2 {
+  background-color: #1c1f26;
+  border-left: 4px solid #00e5ff;
+  padding: 1.5rem;
+  text-align: justify;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 229, 255, 0.3);
+}
+
+.formacao-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.formacao-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.formacao-lista i {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
+.formacao-lista div {
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.formacao-lista span {
+  font-size: 0.95em;
+  color: #ffffff;
+}
+
+.carousel-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #00e5ff; /* Borda no estilo Tron */
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.3); /* Sombra com brilho neon */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto; /* Remove altura fixa para manter proporção */
+    max-height: 400px; /* Limita altura máxima, mas mantém proporção */
+    object-fit: contain; /* Garante que a imagem seja exibida inteira */
+    flex-shrink: 0;
+    display: block; /* Remove espaços indesejados abaixo da imagem */
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background 0.3s;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.dots {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: white;
+}
+
+.menu-toggle {
+    display: block;
+  }
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  max-width: 1200px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #00e5ff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+/* Ajuste responsivo */
+@media (max-width: 600px) {
+
+  .menu-toggle {
+    display: block; /* Botão visível em telas menores */
+  }
+
+  .menu-container {
+    justify-content: space-between; /* Botão à esquerda, menu à direita */
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* escondido por padrão */
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .carousel img {
+      max-height: 250px; /* Reduz altura máxima em telas menores */
+  }
+
+  .nav-button {
+      padding: 10px;
+      font-size: 18px;
+  }
+  
+  .top-image {
+    position: relative;
+  }
+
+  .top-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .top-image h1 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 1.5rem;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4); /* opcional: destaca o texto */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+}
+
+.contact-icons a {
+  margin: 0 10px;
+  color: #00e5ff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #1a1c20;
+  padding: 1rem;
+  text-align: center;
+  color: #aaa;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+
