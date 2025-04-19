@@ -253,6 +253,18 @@ nav a:hover {
 
 
 /* Ajuste responsivo */
+@media (max-width: 900px){
+  .carousel-container {
+    width: 95%;
+  }
+
+  .carousel img {
+    max-height: 300px;
+  }
+    
+}
+
+
 @media (max-width: 600px) {
 
   .menu-toggle {
@@ -331,4 +343,41 @@ footer {
   font-size: 0.9rem;
 }
 
+.livros-conteiner{
+  background-color: #1c1f26;
+  border-left: 4px solid #00e5ff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+
+.livro-card {
+  width: 200px; /* mesma largura da imagem */
+  text-align: center;
+  margin: 20px auto;
+}
+
+.capa-livro {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffff88;
+  transition: transform 0.3s ease;
+}
+
+.capa-livro:hover {
+  transform: scale(1.05);
+}
+
+.livro-card p {
+  font-size: 14px;
+  color: #ccc; /* ou o que combinar com seu tema */
+  margin-top: 10px;
+}
