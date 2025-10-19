@@ -392,7 +392,7 @@ footer {
 }
 
 .thumb-video {
-  width: 40%;            /* Reduz o tamanho da imagem */
+  width: 50%;            /* Reduz o tamanho da imagem */
   max-width: 350px;      /* Limite máximo */
   border-radius: 10px;
   box-shadow: 0 0 15px #00ffff;
@@ -410,6 +410,7 @@ footer {
   margin-top: 10px;
   font-size: 1rem;
 }
+
 
 
 
